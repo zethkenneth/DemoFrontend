@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import '../../Homepage.css';
 import med from "../../assets/med.svg";
+import Home from "./Home.js";
+import Footer from "./Footer.js";
 function Homepage() {
     return (
-        <div className="container">
-            <header>
-                     <img src={med} alt="" />
-                <div> 
-                 <h1><strong>WMSU CLINIC</strong> MONITORING AND INVENTORY SYSTEM</h1>
-                <p> a web-based clinic system developed by Debug.Go to support the WMSU-Health Service Center's daily operation.  </p>
-                </div>
-             </header>
-        </div>
-        
+        <div className="flex flex-col min-h-screen overflow-hidden">
+
+      {/*  Site header */}
+     
+
+      {/*  Page content */}
+      <main className="flex-grow">
+        <Home/>
+        {/*  Page sections */}
+
+      </main>
+
+      {/*  Site footer */}
+      <Footer />
+
+    </div>
     )
 }
 
