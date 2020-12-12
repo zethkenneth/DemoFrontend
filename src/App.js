@@ -170,8 +170,8 @@ export default function App() {
   
   return (
     <div className="min-h-screen bg-white">
-      <nav className="bg-white border-b border-gray-200">
-        <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="bg-white border-b border-gray-200 mb-0">
+        <div className=" max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
               {Logged ? 
                 <div className="flex">
@@ -554,9 +554,6 @@ function Dashboard() {
           </nav>
         </div>
       </header>
-<div>
-  Hello
-</div>
       <main>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="px-4 py-8 sm:px-0">
