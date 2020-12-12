@@ -1,0 +1,60 @@
+.container{
+    width: 80%;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: -4rem;
+  }
+
+header {
+    position: relative;
+    z-index: 1;
+  }
+  
+header div {
+    padding-top: 50px;
+  
+  }
+  
+  header div h1 {
+    font-size: 55px;
+  }
+  
+  header div p {
+    width: 50%;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  header img {
+    position: absolute;
+    z-index: -2;
+    right: -30%;
+    top: -20px;
+  }
+  
+  header div a {
+    padding: 20px;
+    display: block;
+    margin-top: 70px;
+    width: 170px;
+    border-radius: 40px;
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  header div a,
+  .newsletter input[type="submit"] {
+    border: 1px solid blue;
+    color: blue;
+  }
+@media screen and (max-width: 1600px) {
+    header img {
+      width: 700px;
+      right: -20%;
+      top: 80px;
+      left: 50%;
+    }
+  }
+  
