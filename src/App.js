@@ -100,7 +100,7 @@ const routes = [
       },
       {
         path: "/patients", 
-        element: <Patients />
+        element: <p>patients</p>
       }
     ] 
   },
@@ -114,11 +114,11 @@ const routes = [
       },
       { 
         path: "/stocks", 
-        element: <p>Stocks</p> 
+        element: <Stocks/>
       },      
       { 
         path: "/medicines", 
-        element: <p>Medicines</p> 
+        element: <Medicine/>
       }
     ]
   },
@@ -135,21 +135,22 @@ const routes = [
       },
       { 
         path: "/departments", 
-        element: <p>Department</p> },
+        element: <Departmentss /> 
+      },
       { 
         path: "/courses", 
-        element: <p>Courses</p> 
+        element: <Coursess/> 
       },
       { path: "/units", 
-        element: <p>Units</p> 
+        element: <Unitss/> 
       },
       { 
         path: "/accountlogs", 
-        element: <p>Account Logs</p> 
+        element: <Accountlogss/> 
       },
       { 
         path: "/medicinelogs", 
-        element: <p>Medicine Logs</p> 
+        element: <Medicinelogss/>
       },
     ] 
   },
@@ -354,7 +355,7 @@ function Patients() {
 
               <div class="col-span-6 sm:col-span-4">
                   <label for="Student_id" class="block text-sm font-medium text-gray-700">ID</label>
-                  <input type="text" name="Student_id" id="Student_id" autocomplete="Student_id" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-50 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                  <input type="text" name="Student_id" id="Student_id" autocomplete="Student_id" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-50 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200 text-center" />
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
@@ -379,27 +380,33 @@ function Patients() {
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
-                  <label for="Height" class="block text-sm font-medium text-gray-700">Height</label>
-                  <input type="text" name="Height" id="Height" autocomplete="Height" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-25 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                  <label for="Blood_sugar" class="block text-sm font-medium text-gray-700">Blood Sugar</label>
+                  <input type="text" name="Blood_sugar" id="Blood_sugar" autocomplete="Blood_sugar" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-25 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+
+
+                <div class="col-span-6 sm:col-span-4">
+                  <label for="height" class="text-sm font-medium text-gray-700">Height</label>
+                  <div class="flex">
+                  <input type="text" name="Weight" id="height" autocomplete="height" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-15 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200 text-center"  />
+                 <p class="ml-1">cm</p>
+                  </div>
+                  
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
                   <label for="Weight" class="text-sm font-medium text-gray-700">Weight</label>
                   <div class="flex">
-                  <input type="text" name="Weight" id="Weight" autocomplete="Weight" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-15 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200 "  />
-                  <select id="Course" name="Course" autocomplete="Course" class="mt-1 block wr-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-6">
-                    <option>Student</option>
-                    <option>Employee</option>
+                  <input type="text" name="Weight" id="Weight" autocomplete="Weight" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-15 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200 text-center"  />
+                  <select id="Weight" name="Weight" autocomplete="Weight" class="mt-1 block  border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-7 w-14">
+                    <option>kg</option>
+                    <option>lbs</option>
                    
                   </select>
                   </div>
                 </div>
 
-                <div class="col-span-6 sm:col-span-4">
-                  <label for="Blood_sugar" class="block text-sm font-medium text-gray-700">Blood Sugar</label>
-                  <input type="text" name="Blood_sugar" id="Blood_sugar" autocomplete="Blood_sugar" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-25 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
-                </div>
-
+               
 
               </div>
             </div>
@@ -484,14 +491,13 @@ function Accountss() {
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
-                  <label for="Weight" class="block text-sm font-medium text-gray-700">Weight</label>
-                  <input type="text" name="Weight" id="Weight" autocomplete="Weight" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-25 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                  <label for="password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                  <input type="password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
 
-                <div class="col-span-6 sm:col-span-4">
-                  <label for="Blood_sugar" class="block text-sm font-medium text-gray-700">Blood Sugar</label>
-                  <input type="text" name="Blood_sugar" id="Blood_sugar" autocomplete="Blood_sugar" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-25 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
-                </div>
+                
+
+               
 
 
               </div>
@@ -515,7 +521,463 @@ function Accountss() {
   );
 }
 
+function Departmentss() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Account Information</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
 
+             
+              
+
+               
+
+             
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="description" class="block text-sm font-medium text-gray-700">Department Name</label>
+                  <input type="text" name="description" id="first_name" autocomplete="description" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                
+  
+               
+
+               
+
+               
+
+                
+
+               
+
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button type="clear" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Clear
+              </button>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Coursess() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Account Information</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+             
+              <div class="col-span-6 sm:col-span-4">
+                  <label for="department" class="block text-sm font-medium text-gray-700">Select Department</label>
+                  <select id="department" name="department" autocomplete="department" class="mt-1 block w-80 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm w-80">
+                    <option>Department Of Egineering</option>
+                    <option>Department Of Nursing</option>
+                    <option>Institute Of Computer Studies</option>
+                    <option>Department Of Architecture</option>
+                   
+                  </select>
+                  </div>
+
+               
+
+             
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="description" class="block text-sm font-medium text-gray-700">Course Name</label>
+                  <input type="text" name="course_name" id="course_name" autocomplete="course_name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                
+  
+               
+
+               
+
+               
+
+                
+
+               
+
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button type="clear" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Clear
+              </button>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Unitss() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Name Of Unit/Office</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+             
+              
+
+               
+
+             
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Unit/Office Name</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                
+  
+               
+
+               
+
+               
+
+                
+
+               
+
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button type="clear" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Clear
+              </button>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Accountlogss() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Search Account</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+             
+              
+
+               
+
+             
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Search Account</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                
+  
+               
+
+               
+
+               
+
+                
+
+               
+
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                SEARCH
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Medicinelogss() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Search Medicine</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+             
+              
+
+               
+
+             
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Search Medicine</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                
+  
+               
+
+               
+
+               
+
+                
+
+               
+
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                SEARCH
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Medicine() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Add Medicine</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+    
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Generic Name</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Brand Name</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Dosage</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+    
+
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
+            <button type="clear" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Clear
+              </button>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
+
+function Stocks() {
+  return (
+    <div class="mt-10 sm:mt-0">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <div class="px-4 sm:px-0">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">Stocks</h3>
+          <p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+    
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Arrive Date</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Expiration Date</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Quantity</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="unit" class="block text-sm font-medium text-gray-700">Total Quantity</label>
+                  <input type="text" name="unit" id="unit" autocomplete="unit" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
+                </div>
+  
+                <div class="col-span-6 sm:col-span-4">
+                  <label for="department" class="block text-sm font-medium text-gray-700">Name Of Medicine</label>
+                  <select id="department" name="department" autocomplete="department" class="mt-1 block w-80 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm w-80">
+                    <option>Paracetamol</option>
+                    <option>Biogesic</option>
+                    <option>Aspirin</option>
+                    <option>Diatabs</option>
+                   
+                  </select>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            
+            <button type="clear" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Clear
+              </button>
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 m-2">
+                ADD
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+            
+  );
+}
 
 function Dashboard() {
   return (
