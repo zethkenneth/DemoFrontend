@@ -268,11 +268,12 @@ export default function App() {
         </div>
         </div>
       </nav>
-      <div className="py-10">{element}</div>
+      <div className="py-0">{element}</div>
     </div>
   );
 
 }
+
 
 
 
