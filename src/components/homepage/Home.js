@@ -18,7 +18,7 @@ function Home() {
         <div className="">
           
         </div>
-        <img className="bg-green-300 mx-1 object-contain h-48 w-full" src={med}/>
+        <img className="bg-green-300 mx-1 object-contain h-48 w-full" alt="medicalimage" src={med}/>
       </section>
     );
   }

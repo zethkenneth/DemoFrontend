@@ -1,6 +1,6 @@
-import React, { useState }  from 'react';
+import React  from 'react';
 import '../../Homepage.css';
-import med from "../../assets/med.svg";
+
 import Home from "./Home.js";
 import Footer from "./Footer.js";
 function Homepage() {
