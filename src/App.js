@@ -342,11 +342,11 @@ function Login() {
                           <form onSubmit={onSubmitForm} className="mt-8 mb-4">
                             <div className="mb-4">
                               <label for="userEmail" className="sr-only">Username</label>
-                              <input className="border-solid border border-gray-400 rounded px-2 py-3" type="text" name="username" id="userEmail" placeholder="Username" value={username}  onChange={e => onChange(e)}/>
+                              <input className="border-solid border border-gray-400 rounded px-2 py-3" type="text" name="username" id="userEmail" placeholder="Username" value={username} required onChange={e => onChange(e)}/>
                             </div>
                             <div>
                               <label for="userEmail" className="sr-only">Password</label>
-                              <input className="border-solid border border-gray-400 rounded px-2 py-3" type="password" name="password" id="userPass" placeholder="Password" value={password}  onChange={e => onChange(e)}/>
+                              <input className="border-solid border border-gray-400 rounded px-2 py-3" type="password" name="password" id="userPass" placeholder="Password" value={password} required  onChange={e => onChange(e)}/>
                             </div>
                             <div className="my-4 flex items-center">
                               <input className="h-4 w-4 mr-2" type="checkbox" id="userRemember" />
