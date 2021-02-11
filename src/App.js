@@ -51,6 +51,7 @@ const IsLogged = () =>{
   GlobalVariables.Logged = !GlobalVariables.Logged;
 }
 
+
 const checkAuthenticated = async () => {
   try {
     const res = await fetch("http://localhost:5000/auth/verify", {
@@ -174,8 +175,6 @@ const routes = [
   },
 ];
  
-
-
 export default function App() {
  
   const [Logged, setLogged] = useState(false);
@@ -267,8 +266,6 @@ export default function App() {
                       Login
                   </NavLink>
                 </div>
-              
-         
               }
           </div>
         </div>
@@ -302,10 +299,12 @@ function Login() {
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
-      const body = { username, password };
+      const acc_password =  password;
+      const acc_username =  username;
+      const body = { acc_username, acc_password };
       
-      const response = await fetch(
-        "http://localhost:5000/authentication/login",
+      const response = await fetch("http://localhost:5000/authentication/login"
+        ,
         {
           method: "POST",
           headers: {
@@ -313,17 +312,19 @@ function Login() {
           },
           body: JSON.stringify(body)
         }
-      );
+      ).catch(function (error) {
+          console.log(error);
+      });
       
-      const parseRes = await response.json();
-      console.log(parseRes.jwtToken);
-      if (parseRes.jwtToken) {
-        localStorage.setItem("token", parseRes.jwtToken);
+     
+      const parseRes = await response.json()  ;
+      console.log(parseRes.token);
+      if (parseRes.token) {
+        localStorage.setItem("token", parseRes.token);
         setAuth(true);
         console.log("Success!");
       } else {
         setAuth(false);
-       
         console.log("Failed login");
       }
     } catch (err) {
@@ -352,7 +353,7 @@ function Login() {
                               <input className="h-4 w-4 mr-2" type="checkbox" id="userRemember" />
                               <label for="userRemember">Remember me</label>
                             </div>
-                            <button onClick={onLogged} className="bg-gray-500 hover:bg-gray-600 text-white font-bold w-full py-3" type="submit"  >Log in </button>
+                            <button onClick={onLogged} className="bg-gray-500 hover:bg-gray-600 text-white font-bold w-full py-3" type="submit" >Log in </button>
                           </form>
                         </div>
                       </div>
@@ -380,7 +381,6 @@ function Accountss() {
           <div class="shadow overflow-hidden sm:rounded-md">
             <div class="px-4 py-5 bg-white sm:p-6">
               <div class="grid grid-cols-6 gap-6">
-
               <div class="col-span-6 sm:col-span-4">
                   <label for="account_type" class="block text-sm font-medium text-gray-700">Account Type</label>
                   <select id="account_type" name="account_type" autocomplete="account_type" class="mt-1 block w-80 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm w-80">
@@ -395,7 +395,6 @@ function Accountss() {
                   <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
                   <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
-  
                 <div class="col-span-6 sm:col-span-3">
                   <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
                   <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
@@ -404,29 +403,18 @@ function Accountss() {
                   <label for="last_name" class="block text-sm font-medium text-gray-700">Middle Name</label>
                   <input type="text" name="Middle_name" id="Middle_name" autocomplete="Middle-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
-  
-               
-
                 <div class="col-span-6 sm:col-span-4">
                   <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
                   <input type="username" name="username" id="blood_pressure" autocomplete="username" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
-
                 <div class="col-span-6 sm:col-span-4">
                   <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                   <input type="password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
-
                 <div class="col-span-6 sm:col-span-4">
                   <label for="password" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                   <input type="password" name="password" id="password" autocomplete="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-80 shadow-sm sm:text-sm border-gray-300 rounded-md bg-gray-200" />
                 </div>
-
-                
-
-               
-
-
               </div>
             </div>
             
@@ -859,11 +847,8 @@ function Stocks() {
                     <option>Aspirin</option>
                     <option>Diatabs</option>
                    
-                  </select>
-                  
+                  </select>                  
                   </div>
-                
-                
                   <div class="col-span-6 sm:col-span-4">
                   <label for="department" class="block text-sm font-medium text-gray-700">Name Of Medicine</label>
                   <select id="department" name="department" autocomplete="department" class="mt-1 block w-80 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm w-80">
@@ -1049,7 +1034,7 @@ function Stocks() {
 
 <div>
 <nav class="relative z-0 inline-flex shadow-sm">
-    <div	>
+    <div>
       
     </div>
     <div>
@@ -1655,13 +1640,12 @@ function Patients() {
                         <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-blue-900 text-sm leading-5">September 12</td>
                         <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
                             <button class="px-5 py-2 border-blue-500 border text-black-500 rounded transition duration-300 hover:bg-blue-700 hover:text-white focus:outline-none">Edit</button>
-                        </td>
+                      </td>
               </tr>
             </tbody>
         </table>
       <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-4 work-sans">
-
-<div>
+  <div>
 <nav class="relative z-0 inline-flex shadow-sm">
     <div	>
       
